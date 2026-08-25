@@ -1,0 +1,149 @@
+:root {
+  --parchment-bg: #efdfb8;
+  --parchment-border: #7a5a30;
+  --ink: #2b1d0e;
+  --gryffindor-red: #740001;
+  --gryffindor-gold: #d3a625;
+  --slytherin-green: #1a472a;
+  --square-light: #e9d6a6;
+  --square-dark: #a9825a;
+}
+
+body {
+  background: radial-gradient(circle at top, #3b2a1a 0%, #14100b 75%);
+  font-family: 'MedievalSharp', cursive;
+  color: var(--ink);
+}
+
+.parchment {
+  background-color: var(--parchment-bg);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(122, 90, 48, 0.18), transparent 55%),
+    radial-gradient(circle at 85% 85%, rgba(122, 90, 48, 0.18), transparent 55%);
+  border: 6px double var(--parchment-border);
+  border-radius: 10px;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.65);
+}
+
+.title {
+  font-family: 'Cinzel Decorative', serif;
+  text-align: center;
+  color: var(--gryffindor-red);
+  text-shadow: 1px 1px 0 var(--gryffindor-gold);
+  margin: 0;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+
+.subtitle {
+  text-align: center;
+  font-style: italic;
+  margin: 0.25rem 0 0;
+  color: var(--parchment-border);
+}
+
+.board {
+  border: 4px solid var(--gryffindor-gold);
+  box-shadow: 0 0 20px rgba(211, 166, 37, 0.5);
+}
+
+.square--light {
+  background: var(--square-light);
+}
+
+.square--dark {
+  background: var(--square-dark);
+}
+
+.square--start {
+  box-shadow: inset 0 0 0 3px var(--slytherin-green);
+}
+
+.square--end {
+  box-shadow: inset 0 0 0 3px var(--gryffindor-red);
+}
+
+.square--path {
+  background-color: rgba(211, 166, 37, 0.55);
+}
+
+.square--current {
+  box-shadow: inset 0 0 16px 4px gold;
+}
+
+.knight-token {
+  animation: appear 0.4s ease-out;
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.status {
+  font-weight: bold;
+  color: var(--ink);
+}
+
+.btn {
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 0.02em;
+}
+
+.btn--cast {
+  background: var(--gryffindor-red);
+  color: var(--gryffindor-gold);
+}
+
+.btn--cast:hover:not(:disabled) {
+  background: #5c0001;
+}
+
+.btn--reset {
+  background: var(--slytherin-green);
+  color: #e8d5a8;
+}
+
+.btn--reset:hover {
+  background: #123a20;
+}
+
+.legend-swatch--start {
+  background: var(--slytherin-green);
+}
+
+.legend-swatch--end {
+  background: var(--gryffindor-red);
+}
+
+.legend-swatch--path {
+  background: rgba(211, 166, 37, 0.8);
+}
+
+.map-reveal {
+  border-top: 2px dashed var(--parchment-border);
+  padding-top: 1rem;
+}
+
+.map-reveal h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.1rem;
+  color: var(--gryffindor-red);
+}
+
+.output {
+  background: #1c140a;
+  color: var(--gryffindor-gold);
+  font-family: 'MedievalSharp', monospace;
+  border: 2px solid var(--parchment-border);
+}
+
+.footer {
+  color: var(--parchment-border);
+}
