@@ -26,6 +26,6 @@ export default class BFSPathFinder extends PathFinder {
       }
     }
 
-    return null; 
+    return null;
   }
 }
