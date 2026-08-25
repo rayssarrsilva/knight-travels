@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knight's Travails — O Feitiço do Cavaleiro</title>
+  <meta name="description" content="Encontre o caminho mais curto de um cavaleiro de xadrez com BFS, em um tabuleiro com clima de Hogwarts." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=MedievalSharp&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/harry-potter-theme.css" />
+</head>
+<body>
+  <main class="parchment">
+    <header class="header">
+      <h1 class="title">Knight's Travails</h1>
+      <p class="subtitle">— o feitiço do Cavaleiro Andarilho —</p>
+    </header>
+
+    <section class="game-container">
+      <div id="board" class="board" role="grid" aria-label="Tabuleiro de xadrez 8 por 8"></div>
+
+      <div class="controls">
+        <p id="status" class="status" role="status"></p>
+        <button id="cast-btn" class="btn btn--cast" type="button">🪄 Lançar Feitiço</button>
+        <button id="reset-btn" class="btn btn--reset" type="button">🔄 Recomeçar</button>
+
+        <div class="legend">
+          <p><span class="legend-swatch legend-swatch--start"></span> Casa inicial</p>
+          <p><span class="legend-swatch legend-swatch--end"></span> Casa final</p>
+          <p><span class="legend-swatch legend-swatch--path"></span> Caminho encontrado</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-reveal">
+      <h2>📜 O Mapa do Maroto revela:</h2>
+      <pre id="output" class="output" aria-live="polite"></pre>
+    </section>
+
+    <footer class="footer">
+      <p>Criado por Rayssa Roberta Rodrigues Silva · Projeto original: The Odin Project</p>
+    </footer>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
