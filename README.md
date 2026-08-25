@@ -5,6 +5,8 @@
 Um tabuleiro de xadrez com clima de Hogwarts / A Hogwarts-styled chessboard where you find the shortest path a knight can take between two squares, using **BFS (Breadth-First Search)** over an implicit graph.
 
 ---
+## Demo
+<img width="1920" height="881" alt="knighttravails" src="https://github.com/user-attachments/assets/4aafa8c6-aacc-47a3-bfe7-6a38ab9ec261" />
 
 ## 🇧🇷 Português
 
